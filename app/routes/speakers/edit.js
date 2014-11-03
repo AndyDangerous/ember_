@@ -6,7 +6,7 @@ export default Ember.Route.extend({
    submit:  function() {
     var my_model = this.controller.get('model');
     my_model.save();
-    this.trnsitionTo('speakers.show', my_model);
+    this.transitionTo('speakers.show', my_model);
     }
   }
 });
