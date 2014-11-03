@@ -1,5 +1,19 @@
-{{#each}}
-  {{~#link-to 'speakers.show' this}}
-    {{name}} ({{presentations.length}})
-  {{~/link-to}}
-{{/each}}
+<h3>Speakers(from index template)</h3>
+
+<table>
+  <thead>
+  <th>Name</th><th>Presentation Count</th>
+  </thead>
+  
+  <tbody>
+  <p>{{#link-to 'speakers.create' class="create-speaker"}}Create{{/link-to}}</p>
+
+  {{#each}}
+    <tr>
+    <td>
+    {{~#link-to 'speakers.show' this}}
+      {{name}}{{~/link-to}}</td><td>{{presentations.length}}</td>
+    </tr>
+  {{/each}}
+  </tbody>
+</table>
